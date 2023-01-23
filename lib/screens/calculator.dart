@@ -22,11 +22,12 @@ class _CalculatorState extends State<Calculator> {
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Column(
-      children: [
-        Display(memory.value),
-        Keyboard(_onPressed),
-      ],
-    ));
+          children: [
+            Display(memory.value),
+            Keyboard(_onPressed),
+          ],
+        ));
   }
 }
